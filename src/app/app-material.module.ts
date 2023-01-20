@@ -14,6 +14,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSelectModule} from "@angular/material/select";
+import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [],
@@ -32,5 +33,10 @@ import {MatSelectModule} from "@angular/material/select";
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatTooltipModule,]})
+    MatTooltipModule,
+    MatSnackBarModule],
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500, verticalPosition: 'top'}}
+  ]
+})
 export class AppMaterialModule { }
