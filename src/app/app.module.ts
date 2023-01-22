@@ -8,6 +8,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppMaterialModule} from "./app-material.module";
 import {LdapManagementModule} from "./ldap-management/ldap-management.module";
 import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import {HttpClientInMemoryWebApiModule, InMemoryDbService} from "angular-in-memory-web-api";
+import {InMemoryUsersService} from "./in-memory-users.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,11 @@ import {AppRoutingModule} from "./app-routing.module";
     BrowserAnimationsModule,
     AppMaterialModule,
     LdapManagementModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryUsersService, {dataEncapsulation: false}
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]

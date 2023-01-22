@@ -9,7 +9,11 @@ import {LdapListComponent} from "./ldap-list/ldap-list.component";
 import {LdapAddComponent} from "./ldap-add/ldap-add.component";
 import {LdapEditComponent} from "./ldap-edit/ldap-edit.component";
 import { LdapManagementRoutingModule } from './ldap-management-routing.module';
+import {HttpClientModule} from "@angular/common/http";
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryUsersService} from "../in-memory-users.service";
 
+// @ts-ignore
 @NgModule({
   declarations: [
     LdapListComponent,
@@ -24,6 +28,10 @@ import { LdapManagementRoutingModule } from './ldap-management-routing.module';
     ReactiveFormsModule,
     AppMaterialModule,
     LdapManagementRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryUsersService, {dataEncapsulation: false}
+    )
   ],
   // schemas: [
   //   CUSTOM_ELEMENTS_SCHEMA

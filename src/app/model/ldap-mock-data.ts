@@ -2,12 +2,13 @@ import { UserLdap } from "./user-ldap";
 
 export const LDAP_USERS: UserLdap[] = [
   {
-    login: 'test.v1',
-    nom: 'v1',
-    prenom: 'Test',
-    nomComplet: 'V1 Test',
+    id: 1,
+    login: 'c.make34',
+    nom: 'Makélélé',
+    prenom: 'Claude',
+    nomComplet: 'Claude Makélélé',
     motDePasse: null,
-    mail: 'test.v1@epsi.fr',
+    mail: 'c.make34@epsi.fr',
     role: 'ROLE_USER',
     dateEmbauche: '2020-01-01',
     employeNumero: 1234,
@@ -16,6 +17,7 @@ export const LDAP_USERS: UserLdap[] = [
     active: true,
   },
   {
+    id: 2,
     login: 'test.v2',
     nom: 'v2',
     prenom: 'Test',
