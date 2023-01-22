@@ -21,4 +21,7 @@ export class AlertComponent implements OnInit {
     this.cssClass = ['alert-hide'];
   }
 
+  removeAlert() {
+    this.cssClass = ['alert-hide'];
+  }
 }

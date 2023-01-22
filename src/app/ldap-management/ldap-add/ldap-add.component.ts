@@ -3,7 +3,7 @@ import {LdapDetailComponent} from "../ldap-detail/ldap-detail.component";
 import {FormBuilder} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Router} from "@angular/router";
-import {UsersService} from "../service/users.service";
+import {UsersService} from "../../service/users.service";
 
 // @ts-ignore
 @Component({
